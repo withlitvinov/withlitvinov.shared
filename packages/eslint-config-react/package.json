@@ -4,6 +4,9 @@
   "author": "Anatolii Litvinov",
   "license": "MIT",
   "type": "module",
+  "files": [
+    "lib"
+  ],
   "exports": {
     ".": {
       "types": "./lib/index.d.ts",
