@@ -1,8 +1,21 @@
 {
-  "name": "root",
-  "private": true,
-  "dependencies": {},
+  "version": "0.1.0",
+  "type": "module",
   "devDependencies": {
-    "lerna": "^8.1.9"
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@tsconfig/node-lts": "^22.0.1",
+    "@types/node": "^22.10.2",
+    "lerna": "^8.1.9",
+    "prettier": "^3.4.2",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "rollup": "^4.28.1"
   }
 }
