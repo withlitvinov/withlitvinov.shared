@@ -84,6 +84,8 @@ for (let i = 0; i < packages.length; i++) {
       "--environment",
       [`TARGET:${_package}`],
     ],
-    { stdio: "inherit" },
+    {
+      stdio: "inherit",
+    },
   );
 }

@@ -6,6 +6,7 @@ default:
     - corepack enable
     - corepack prepare pnpm@latest-9 --activate
     - pnpm config set store-dir .pnpm-store
+    - export PATH=$PATH:$(pnpm bin)
   cache:
     key:
       files:
