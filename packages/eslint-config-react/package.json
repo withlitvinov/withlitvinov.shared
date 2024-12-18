@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "author": "Anatolii Litvinov",
   "license": "MIT",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./lib/index.d.ts",
@@ -15,8 +16,13 @@
     "type": "git",
     "url": "git+https://git.withlitvinov.com/withlitvinov/withlitvinov.shared.git"
   },
+  "scripts": {
+    "test": "vitest --dir test"
+  },
   "devDependencies": {
-    "typescript": "catalog:"
+    "execa": "^9.5.2",
+    "typescript": "catalog:",
+    "vitest": "^2.1.8"
   },
   "peerDependencies": {
     "@eslint/js": "^9.17.0",
