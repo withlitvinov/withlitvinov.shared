@@ -37,3 +37,5 @@ build:
   artifacts:
     paths:
       - "packages/**/lib/"
+    exclude:
+      - "**/node_modules/**"
