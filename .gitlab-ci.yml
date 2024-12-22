@@ -15,17 +15,9 @@ default:
       - .pnpm-store
 
 stages:
-  - test
   - build
+  - test
   - deploy
-
-test:
-  extends:
-    - .pnpm
-  stage: test
-  script:
-    - pnpm install
-    - pnpm lerna run test
 
 build:
   extends:
@@ -39,3 +31,13 @@ build:
       - "packages/**/lib/"
     exclude:
       - "**/node_modules/**"
+
+test:
+  extends:
+    - .pnpm
+  stage: test
+  dependencies:
+    - build
+  script:
+    - pnpm install
+    - pnpm lerna run test
