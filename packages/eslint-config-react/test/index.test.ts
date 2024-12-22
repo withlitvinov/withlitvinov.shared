@@ -26,7 +26,11 @@ describe("should pass lint without error in new project", () => {
   const projectName = "minimal";
 
   test(projectName, async () => {
-    const { stdout, failed } = await runLintAgainst(projectName);
+    const executionResult = await runLintAgainst(projectName);
+
+    console.log(executionResult);
+
+    const { stdout, failed } = executionResult;
 
     expect(stdout).toMatch(WHITESPACE_ONLY);
     expect(failed).toEqual(false);
