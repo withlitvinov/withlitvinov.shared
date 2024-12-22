@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "build": "node ./scripts/build.js",
-    "version:patch": "lerna version patch"
+    "version:patch": "lerna version patch --yes",
+    "publish": "lerna publish from-package --yes"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^5.1.1",
