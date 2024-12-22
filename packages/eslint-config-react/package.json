@@ -1,6 +1,6 @@
 {
   "name": "@withlitvinov/eslint-config-react",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": "Anatolii Litvinov",
   "license": "MIT",
   "type": "module",
