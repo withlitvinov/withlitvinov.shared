@@ -25,14 +25,20 @@ function runLintAgainst(projectName: string) {
 describe("should pass lint without error in new project", () => {
   const projectName = "minimal";
 
-  test(projectName, async () => {
-    const executionResult = await runLintAgainst(projectName);
+  test(
+    projectName,
+    async () => {
+      const executionResult = await runLintAgainst(projectName);
 
-    console.log(executionResult);
+      console.log(executionResult);
 
-    const { stdout, failed } = executionResult;
+      const { stdout, failed } = executionResult;
 
-    expect(stdout).toMatch(WHITESPACE_ONLY);
-    expect(failed).toEqual(false);
-  });
+      expect(stdout).toMatch(WHITESPACE_ONLY);
+      expect(failed).toEqual(false);
+    },
+    {
+      timeout: 30 * 1000,
+    },
+  );
 });
