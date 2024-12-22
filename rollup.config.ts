@@ -27,7 +27,7 @@ if (!env.target) {
 const require = createRequire(import.meta.url);
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
-const rootVersion = require("./package.json").version;
+// const rootVersion = require("./package.json").version;
 
 const packagesDir = path.resolve(__dirname, PACKAGE_BASE_DIR);
 const packageDir = path.resolve(packagesDir, env.target);
@@ -35,10 +35,10 @@ const packageDir = path.resolve(packagesDir, env.target);
 const resolve = (filePath: string) => path.resolve(packageDir, filePath);
 
 const packageJson = require(resolve(`package.json`));
-const name = path.basename(packageDir);
+// const name = path.basename(packageDir);
 
 const banner = `/**
-* ${packageJson.name} v${rootVersion}
+* ${packageJson.name} v${packageJson.version}
 * (c) 2024-present Anatolii Litvinov
 * @license MIT
 **/`;
