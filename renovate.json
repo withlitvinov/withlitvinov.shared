@@ -5,11 +5,11 @@
     {
       "matchUpdateTypes": ["minor", "patch"],
       "matchCurrentVersion": "!/^(0|.*-(alpha|beta|rc|preview)(\\.\\d+)?$)/",
-      "automerge": true
+      "automerge": false
     }
   ],
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true
+    "automerge": false
   }
 }
